@@ -111,15 +111,15 @@ export default function Home() {
           </div>
 
           {/* Right Column (Image + Circle) */}
-          <div className="w-full lg:w-[45%] flex justify-center items-center relative mt-16 lg:mt-0 h-[400px] lg:h-[600px]">
-            {/* Bright Blue Circle Blob - Made smaller and perfectly centered */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[280px] h-[280px] sm:w-[350px] sm:h-[350px] lg:w-[400px] lg:h-[400px] bg-[#00b4ff] rounded-full z-0 shadow-inner"></div>
+          <div className="w-full lg:w-[45%] flex justify-center items-end relative mt-16 lg:mt-0 h-[450px] lg:h-[650px]">
+            {/* Bright Blue Circle Blob */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[320px] h-[320px] lg:w-[500px] lg:h-[500px] bg-[#00b4ff] rounded-full z-0 shadow-inner"></div>
 
-            {/* Students Image - Scaled up from the center */}
+            {/* Students Image - Forced to take up massive width to fill the red marked area */}
             <img 
               src="/images/students_transparent.png" 
               alt="Students" 
-              className="relative z-10 h-full w-auto object-contain object-center drop-shadow-2xl scale-[1.3] lg:scale-[1.4] -translate-y-8" 
+              className="relative z-10 w-[85%] lg:w-[95%] h-auto max-h-[120%] object-contain object-bottom drop-shadow-2xl translate-y-[5%]" 
             />
           </div>
         </div>
