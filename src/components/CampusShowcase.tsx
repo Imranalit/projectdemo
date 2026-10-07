@@ -60,7 +60,7 @@ export default function CampusShowcase({ name, description, imageUrl, index }: C
             </p>
           </MotionReveal>
           <MotionReveal motionPreset="fadeUp" delay={0.4}>
-            <button className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors w-fit shadow-lg shadow-blue-500/30">
+            <button className="px-6 py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-medium rounded-lg transition-colors w-fit shadow-lg shadow-emerald-500/30">
               Explore Campus
             </button>
           </MotionReveal>
