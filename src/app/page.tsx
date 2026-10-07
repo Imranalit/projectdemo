@@ -55,7 +55,7 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col overflow-hidden font-sans bg-slate-50">
       {/* Hero Section */}
-      <section className="h-screen flex items-center justify-center bg-[#0f3b73] text-white relative overflow-hidden">
+      <section className="min-h-screen flex items-center justify-center bg-[#0f3b73] text-white relative overflow-hidden py-24">
         <div className="absolute inset-0 bg-[url('/images/school_exterior.jpg')] bg-cover bg-center opacity-20 mix-blend-overlay"></div>
         <div className="z-10 text-center px-4 max-w-5xl flex flex-col items-center">
           <img src="/logo.jpg" alt="Ahlul Bait Public School Logo" className="w-48 h-48 mb-8 object-cover rounded-[3rem] shadow-2xl shadow-black/50 border-4 border-[#f7c815]" />
