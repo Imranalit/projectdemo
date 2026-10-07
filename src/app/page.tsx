@@ -90,36 +90,40 @@ export default function Home() {
       </header>
 
       {/* Hero Section */}
-      <section className="relative min-h-[85vh] flex items-center bg-[#2c3e50] text-white overflow-hidden border-b-[16px] border-[#fdbf38]">
-        {/* Background Image */}
-        <div className="absolute inset-0 bg-[url('/images/school_exterior.jpg')] bg-cover bg-center opacity-40 mix-blend-overlay grayscale-[30%]"></div>
+      <section className="relative min-h-[85vh] flex items-center bg-[#2c3e50] text-white overflow-hidden border-b-[16px] border-[#fdbf38] font-['Amanda_Black',var(--font-sans),sans-serif]">
+        {/* Background Image - Overlay transparency reduced by 10% (opacity-30) */}
+        <div className="absolute inset-0 bg-[url('/images/school_exterior.jpg')] bg-cover bg-center opacity-30 mix-blend-overlay grayscale-[30%]"></div>
         
         {/* Content Container */}
         <div className="relative z-10 w-full max-w-7xl mx-auto px-4 md:px-8 py-12 lg:py-0 flex flex-col lg:flex-row items-center justify-between min-h-[85vh]">
           
-          {/* Left Column (Text) */}
+          {/* Left Column (Text - Reduced size by 20%) */}
           <div className="w-full lg:w-[55%] flex flex-col items-start text-left pt-10 lg:pt-0 z-20">
-            <h1 className="text-5xl sm:text-6xl lg:text-[5rem] font-extrabold tracking-tight mb-4 drop-shadow-lg leading-[1.1]">
+            <h1 className="text-4xl sm:text-5xl lg:text-[4rem] font-extrabold tracking-tight mb-4 drop-shadow-lg leading-[1.1]">
               Your Kids<br />Deserve The<br />Best Education
             </h1>
-            <p className="text-lg lg:text-2xl text-gray-100 font-medium mb-10 drop-shadow-md">
+            <p className="text-base lg:text-xl text-gray-100 font-medium mb-8 drop-shadow-md">
               e Learning, Expert Teachers & Safe Environment
             </p>
-            <button className="px-10 py-4 bg-[#fdbf38] hover:bg-yellow-500 text-white font-bold rounded-full transition-all shadow-xl text-lg hover:shadow-2xl transform hover:-translate-y-1">
+            <button className="px-8 py-3.5 bg-[#fdbf38] hover:bg-yellow-500 text-white font-bold rounded-full transition-all shadow-xl text-base hover:shadow-2xl transform hover:-translate-y-1">
               Admission Now
             </button>
           </div>
 
-          {/* Right Column (Image + Circle) */}
-          <div className="w-full lg:w-[45%] flex justify-center items-end relative mt-16 lg:mt-0 h-[450px] lg:h-[650px]">
-            {/* Bright Blue Circle Blob */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[320px] h-[320px] lg:w-[500px] lg:h-[500px] bg-[#00b4ff] rounded-full z-0 shadow-inner"></div>
+          {/* Right Column (Image + Futuristic Navy Circle) */}
+          <div className="w-full lg:w-[45%] flex justify-center items-end relative mt-16 lg:mt-0 h-[480px] lg:h-[700px]">
+            {/* Outer rotating cyber rings for futuristic look */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[340px] h-[340px] lg:w-[520px] lg:h-[520px] rounded-full border border-cyan-400/40 border-dashed animate-[spin_25s_linear_infinite] pointer-events-none z-0"></div>
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[360px] h-[360px] lg:w-[540px] lg:h-[540px] rounded-full border border-sky-300/25 animate-[spin_35s_linear_infinite_reverse] pointer-events-none z-0"></div>
+            
+            {/* Big Navy Blue Circle with glowing futuristic pulse & inner glow */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[310px] h-[310px] lg:w-[480px] lg:h-[480px] bg-[#0f3b73] rounded-full z-0 shadow-[0_0_60px_rgba(15,59,115,0.95),0_0_25px_rgba(0,180,255,0.4),inset_0_0_40px_rgba(0,180,255,0.25)] border-2 border-cyan-400/40 animate-pulse"></div>
 
-            {/* Students Image - Forced to take up massive width to fill the red marked area */}
+            {/* Students Image - Increased by 30% using scale-[1.3] and anchored to bottom */}
             <img 
               src="/images/students_transparent.png" 
               alt="Students" 
-              className="relative z-10 w-[85%] lg:w-[95%] h-auto max-h-[120%] object-contain object-bottom drop-shadow-2xl translate-y-[5%]" 
+              className="relative z-10 w-[90%] lg:w-[105%] h-auto max-h-[130%] object-contain object-bottom drop-shadow-2xl translate-y-[5%] scale-[1.3] origin-bottom" 
             />
           </div>
         </div>
