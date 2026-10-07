@@ -111,15 +111,15 @@ export default function Home() {
           </div>
 
           {/* Right Column (Image + Circle) */}
-          <div className="w-full lg:w-[45%] flex justify-center lg:justify-end relative mt-16 lg:mt-0 h-[500px] lg:h-[750px]">
-            {/* Bright Blue Circle Blob - Made smaller */}
-            <div className="absolute right-[-5%] sm:right-[10%] lg:right-[0%] top-1/2 -translate-y-1/2 w-[300px] h-[300px] sm:w-[380px] sm:h-[380px] lg:w-[480px] lg:h-[480px] bg-[#00b4ff] rounded-full z-0 overflow-hidden shadow-inner"></div>
+          <div className="w-full lg:w-[45%] flex justify-center items-center relative mt-16 lg:mt-0 h-[400px] lg:h-[600px]">
+            {/* Bright Blue Circle Blob - Made smaller and perfectly centered */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[280px] h-[280px] sm:w-[350px] sm:h-[350px] lg:w-[400px] lg:h-[400px] bg-[#00b4ff] rounded-full z-0 shadow-inner"></div>
 
-            {/* Students Image - Made larger */}
+            {/* Students Image - Scaled up from the center */}
             <img 
               src="/images/students_transparent.png" 
               alt="Students" 
-              className="relative z-10 h-[110%] lg:h-[115%] w-auto object-contain object-bottom drop-shadow-2xl translate-y-6 lg:translate-y-10 origin-bottom" 
+              className="relative z-10 h-full w-auto object-contain object-center drop-shadow-2xl scale-[1.3] lg:scale-[1.4] -translate-y-8" 
             />
           </div>
         </div>
