@@ -15,8 +15,9 @@ A modern, elite school website for "Ahlul Bait Public School" (Tharushah), a pro
   - Horizontal scrolling facility gallery with left/right slider controls.
   - Custom UI/UX scrollbar and swipe hints.
   - Global typography configured for 'Amanda Black'.
+  - Student Progress Portal (`/student-progress`) featuring ID search box, live academic evaluation, student photo & biographical details (Muhammad Ali, Father: Tariq Hussain, DOB: 14th March 2016, 4th Class), monthly attendance tracking (95.8%), and detailed subject scorecard (Maths, English, Science) with print functionality.
 - **In Progress**: 
-  - Iterative design tuning based on live Netlify feedback.
+  - Ready for review and further feature expansions.
 - **Pending/Blocked**: 
   - None.
 
@@ -26,3 +27,4 @@ A modern, elite school website for "Ahlul Bait Public School" (Tharushah), a pro
 - **2026-10-07**: Attempted automated background removal with `rembg`. Failed and wasted time. Established new strict rule: NO heavy plugins/downloads for simple manual tasks.
 - **2026-10-07**: Created `rules.md`, `design.md`, and `context.md` to persist project memory and boundaries.
 - **2026-10-07**: Hero section visual upgrades: scaled student cutouts by +30%, downscaled hero text by 20%, transformed circle to animated futuristic navy HUD, reduced overlay transparency by 10% (opacity-30), and set primary font to Amanda Black.
+- **2026-10-07**: Added Student Progress navigation button to top navbar and created `/student-progress` route containing student ID search and interactive comprehensive report card.
