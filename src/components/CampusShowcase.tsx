@@ -39,8 +39,8 @@ export default function CampusShowcase({ name, description, imageUrl, index }: C
 
   return (
     <motion.section
-      className={`h-[600px] flex items-center justify-center p-8 rounded-3xl overflow-hidden border-2 border-transparent hover:border-[#f7c815] transition-all duration-300 ${
-        isEven ? "bg-white shadow-xl" : "bg-blue-50 shadow-xl"
+      className={`h-[600px] flex items-center justify-center p-8 rounded-lg overflow-hidden border border-slate-200 hover:border-[#f7c815] transition-all duration-300 ${
+        isEven ? "bg-white shadow-md hover:shadow-lg" : "bg-blue-50/50 shadow-md hover:shadow-lg"
       }`}
       initial="hidden"
       whileInView="visible"
@@ -50,17 +50,17 @@ export default function CampusShowcase({ name, description, imageUrl, index }: C
       <div className={`w-full h-full flex flex-col ${isEven ? "md:flex-row" : "md:flex-row-reverse"} gap-8 items-center`}>
         <motion.div variants={itemVariants} className="w-full md:w-1/2 flex flex-col justify-center gap-4">
           <MotionReveal motionPreset={isEven ? "slideLeft" : "slideRight"}>
-            <h2 className="text-3xl md:text-4xl font-bold tracking-tighter text-[#0f3b73]">
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-[#0f3b73] mb-2">
               {name}
             </h2>
           </MotionReveal>
           <MotionReveal motionPreset="fadeUp" delay={0.2}>
-            <p className="text-base md:text-lg text-slate-600 leading-relaxed">
+            <p className="text-base md:text-lg text-slate-600 leading-relaxed border-l-4 border-[#f7c815] pl-4">
               {description}
             </p>
           </MotionReveal>
           <MotionReveal motionPreset="fadeUp" delay={0.4}>
-            <button className="mt-4 px-6 py-3 bg-[#0f3b73] hover:bg-[#f7c815] hover:text-[#0f3b73] text-white font-bold rounded-full transition-colors w-fit shadow-lg">
+            <button className="mt-6 px-6 py-3 bg-[#0f3b73] hover:bg-[#f7c815] hover:text-[#0f3b73] text-white font-bold rounded-sm transition-colors w-fit uppercase tracking-wide text-sm shadow-md">
               Explore Facility
             </button>
           </MotionReveal>
@@ -68,7 +68,7 @@ export default function CampusShowcase({ name, description, imageUrl, index }: C
         
         <motion.div 
           variants={itemVariants}
-          className="w-full md:w-1/2 h-[250px] md:h-full relative rounded-2xl overflow-hidden shadow-inner group"
+          className="w-full md:w-1/2 h-[250px] md:h-[80%] relative rounded-md overflow-hidden shadow-inner group"
         >
           <div className="absolute inset-0 bg-[#0f3b73]/10 group-hover:bg-transparent transition-colors duration-500 z-10" />
           <img 

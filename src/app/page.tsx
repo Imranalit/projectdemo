@@ -53,26 +53,48 @@ const CAMPUSES = [
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col overflow-hidden font-sans bg-slate-50">
+    <main className="flex min-h-screen flex-col font-sans bg-slate-50">
+      {/* Sticky Academic Navbar */}
+      <header className="sticky top-0 z-50 w-full bg-white border-b-4 border-[#f7c815] shadow-sm">
+        <div className="max-w-7xl mx-auto px-4 md:px-8 h-20 flex items-center justify-between">
+          <div className="flex items-center gap-4">
+            <img src="/logo.png" alt="Ahlul Bait Public School Logo" className="h-14 w-auto object-contain" />
+            <div className="hidden md:block">
+              <h1 className="text-xl font-bold text-[#0f3b73] leading-tight">Ahlul Bait</h1>
+              <p className="text-xs text-slate-500 font-semibold tracking-wider uppercase">Public School</p>
+            </div>
+          </div>
+          <nav className="hidden lg:flex items-center gap-8 font-medium text-[#0f3b73]">
+            <a href="#" className="hover:text-[#f7c815] transition-colors border-b-2 border-transparent hover:border-[#f7c815] py-1">Future Students</a>
+            <a href="#" className="hover:text-[#f7c815] transition-colors border-b-2 border-transparent hover:border-[#f7c815] py-1">Programs</a>
+            <a href="#" className="hover:text-[#f7c815] transition-colors border-b-2 border-transparent hover:border-[#f7c815] py-1">Admissions</a>
+            <a href="#" className="hover:text-[#f7c815] transition-colors border-b-2 border-transparent hover:border-[#f7c815] py-1">About Us</a>
+          </nav>
+          <button className="lg:hidden text-[#0f3b73]">
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" /></svg>
+          </button>
+        </div>
+      </header>
+
       {/* Hero Section */}
-      <section className="min-h-screen flex items-center justify-center bg-[#0f3b73] text-white relative overflow-hidden py-24">
-        <div className="absolute inset-0 bg-[url('/images/school_exterior.jpg')] bg-cover bg-center opacity-20 mix-blend-overlay"></div>
-        <div className="z-10 text-center px-4 max-w-5xl flex flex-col items-center">
-          <img src="/logo.jpg" alt="Ahlul Bait Public School Logo" className="w-48 h-48 mb-8 object-cover rounded-[3rem] shadow-2xl shadow-black/50 border-4 border-[#f7c815]" />
-          <p className="text-[#f7c815] font-semibold tracking-widest uppercase mb-4 text-sm md:text-base">
+      <section className="relative min-h-[85vh] flex items-center justify-center bg-[#0f3b73] text-white overflow-hidden">
+        <div className="absolute inset-0 bg-[url('/images/school_exterior.jpg')] bg-cover bg-center opacity-30 mix-blend-overlay"></div>
+        <div className="z-10 text-center px-4 max-w-5xl flex flex-col items-center py-20">
+          <img src="/logo.png" alt="Ahlul Bait Public School Logo" className="w-48 h-48 mb-8 object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-500" />
+          <p className="text-[#f7c815] font-bold tracking-widest uppercase mb-4 text-sm md:text-base letter-spacing-2">
             A Project of Ashghrai Organization
           </p>
-          <h1 className="text-5xl md:text-8xl font-extrabold tracking-tight mb-6 drop-shadow-lg">
-            Ahlul Bait Public School
-          </h1>
+          <h2 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 drop-shadow-lg leading-tight">
+            Build a Brighter Future with Us
+          </h2>
           <p className="text-xl md:text-2xl text-blue-100 font-light max-w-3xl mx-auto mb-10 leading-relaxed drop-shadow-md">
-            Quality education with Islamic values, modern teaching methods, and a safe, supportive environment. Tharushah.
+            Quality education with Islamic values, modern teaching methods, and a safe, supportive environment. Located in Tharushah.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-8">
-            <button className="px-8 py-4 bg-[#f7c815] hover:bg-yellow-500 text-[#0f3b73] font-bold rounded-full transition-colors shadow-lg shadow-yellow-500/20">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-4">
+            <button className="px-8 py-4 bg-[#f7c815] hover:bg-yellow-500 text-[#0f3b73] font-bold rounded-sm transition-all shadow-lg hover:shadow-xl uppercase tracking-wide">
               Apply Now
             </button>
-            <button className="px-8 py-4 bg-transparent border-2 border-[#f7c815] hover:bg-[#f7c815] hover:text-[#0f3b73] text-white font-bold rounded-full transition-colors">
+            <button className="px-8 py-4 bg-transparent border-2 border-white hover:bg-white hover:text-[#0f3b73] text-white font-bold rounded-sm transition-all shadow-lg uppercase tracking-wide">
               Explore Programs
             </button>
           </div>
@@ -110,7 +132,7 @@ export default function Home() {
       {/* Footer */}
       <footer className="bg-[#0f3b73] text-blue-200 py-16 text-center border-t-4 border-[#f7c815]">
         <div className="max-w-4xl mx-auto px-4">
-          <img src="/logo.jpg" alt="Logo" className="w-24 h-24 mx-auto mb-6 object-cover rounded-3xl border-2 border-[#f7c815]" />
+          <img src="/logo.png" alt="Logo" className="w-24 h-24 mx-auto mb-6 object-contain drop-shadow-xl" />
           <h3 className="text-2xl font-bold text-white mb-2">Ahlul Bait Public School</h3>
           <p className="mb-2">Near Taxi Stand, Tharushah</p>
           <p className="mb-8 font-bold text-[#f7c815]">📞 03028886164</p>
