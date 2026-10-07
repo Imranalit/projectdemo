@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion, Variants } from "framer-motion";
-import { FadeIn, SlideIn } from "@upendra.manike/next-motion-kit";
+import { MotionReveal } from "@upendra.manike/next-motion-kit";
 
 interface CampusProps {
   name: string;
@@ -49,21 +49,21 @@ export default function CampusShowcase({ name, description, imageUrl, index }: C
     >
       <div className={`max-w-6xl w-full flex flex-col ${isEven ? "md:flex-row" : "md:flex-row-reverse"} gap-12 items-center`}>
         <motion.div variants={itemVariants} className="w-full md:w-1/2 flex flex-col justify-center gap-6">
-          <SlideIn direction={isEven ? "left" : "right"}>
+          <MotionReveal motionPreset={isEven ? "slideLeft" : "slideRight"}>
             <h2 className="text-4xl md:text-6xl font-bold tracking-tighter text-slate-900">
               {name}
             </h2>
-          </SlideIn>
-          <FadeIn delay={0.2}>
+          </MotionReveal>
+          <MotionReveal motionPreset="fadeUp" delay={0.2}>
             <p className="text-lg md:text-xl text-slate-600 leading-relaxed">
               {description}
             </p>
-          </FadeIn>
-          <FadeIn delay={0.4}>
+          </MotionReveal>
+          <MotionReveal motionPreset="fadeUp" delay={0.4}>
             <button className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors w-fit shadow-lg shadow-blue-500/30">
               Explore Campus
             </button>
-          </FadeIn>
+          </MotionReveal>
         </motion.div>
         
         <motion.div 
