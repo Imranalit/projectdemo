@@ -1,3 +1,6 @@
+"use client";
+
+import { useRef } from "react";
 import CampusShowcase from "@/components/CampusShowcase";
 
 const CAMPUSES = [
@@ -52,6 +55,16 @@ const CAMPUSES = [
 ];
 
 export default function Home() {
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  const scrollLeft = () => {
+    scrollRef.current?.scrollBy({ left: -600, behavior: "smooth" });
+  };
+
+  const scrollRight = () => {
+    scrollRef.current?.scrollBy({ left: 600, behavior: "smooth" });
+  };
+
   return (
     <main className="flex min-h-screen flex-col font-sans bg-slate-50">
       {/* Sticky Academic Navbar */}
@@ -97,43 +110,30 @@ export default function Home() {
             </button>
           </div>
 
-          {/* Right Column (Image + Circle + Speech Bubble) */}
+          {/* Right Column (Image + Circle) */}
           <div className="w-full lg:w-[45%] flex justify-center lg:justify-end relative mt-16 lg:mt-0 h-[500px] lg:h-[750px]">
-            {/* Bright Blue Circle Blob */}
-            <div className="absolute right-[-5%] sm:right-[10%] lg:right-[-10%] top-1/2 -translate-y-1/2 w-[350px] h-[350px] sm:w-[450px] sm:h-[450px] lg:w-[650px] lg:h-[650px] bg-[#00b4ff] rounded-full z-0 overflow-hidden shadow-inner"></div>
-            
-            {/* Speech Bubble */}
-            <div className="absolute top-[10%] lg:top-[15%] right-[50%] lg:right-[70%] bg-[#00b4ff] text-white px-6 py-3 rounded-full font-semibold text-lg lg:text-xl shadow-xl z-20 whitespace-nowrap animate-bounce">
-              Back to School
-              {/* Bubble Tail */}
-              <div className="absolute bottom-[-12px] right-10 w-0 h-0 border-l-[12px] border-l-transparent border-t-[18px] border-t-[#00b4ff] border-r-[4px] border-r-transparent transform -rotate-12"></div>
-            </div>
+            {/* Bright Blue Circle Blob - Made smaller */}
+            <div className="absolute right-[-5%] sm:right-[10%] lg:right-[0%] top-1/2 -translate-y-1/2 w-[300px] h-[300px] sm:w-[380px] sm:h-[380px] lg:w-[480px] lg:h-[480px] bg-[#00b4ff] rounded-full z-0 overflow-hidden shadow-inner"></div>
 
-            {/* Students Image */}
+            {/* Students Image - Made larger */}
             <img 
               src="/images/students_transparent.png" 
               alt="Students" 
-              className="relative z-10 h-full w-auto object-contain object-bottom drop-shadow-2xl" 
+              className="relative z-10 h-[110%] lg:h-[115%] w-auto object-contain object-bottom drop-shadow-2xl translate-y-6 lg:translate-y-10 origin-bottom" 
             />
           </div>
         </div>
       </section>
 
       {/* Campuses Horizontal Scroll Container */}
-      <section className="py-16 bg-white overflow-hidden">
+      <section className="py-16 bg-white overflow-hidden relative group">
         <div className="text-center mb-8 px-4">
           <h2 className="text-3xl md:text-5xl font-bold text-[#0f3b73] mb-4">Our Facilities</h2>
           <p className="text-slate-600 max-w-2xl mx-auto mb-4">Play Group to Class 8 (Boys & Girls)</p>
-          <div className="flex items-center justify-center gap-2 text-slate-400 animate-pulse">
-            <span className="text-sm font-medium uppercase tracking-widest">Swipe or Scroll</span>
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </div>
         </div>
         
         {/* Horizontal scroll container (landscape focus) */}
-        <div className="flex overflow-x-auto pb-10 px-8 gap-8 snap-x snap-mandatory">
+        <div ref={scrollRef} className="flex overflow-x-auto pb-10 px-8 gap-8 snap-x snap-mandatory">
           {CAMPUSES.map((campus, index) => (
             <div key={campus.id} className="snap-center shrink-0 w-[85vw] md:w-[60vw] lg:w-[45vw]">
               <CampusShowcase
@@ -144,6 +144,24 @@ export default function Home() {
               />
             </div>
           ))}
+        </div>
+
+        {/* Slider Controls */}
+        <div className="flex justify-center items-center gap-4 mt-2">
+          <button 
+            onClick={scrollLeft}
+            className="w-12 h-12 flex items-center justify-center bg-[#0f3b73] text-white rounded-full hover:bg-[#f7c815] hover:text-[#0f3b73] transition-colors shadow-md"
+            aria-label="Scroll left"
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" /></svg>
+          </button>
+          <button 
+            onClick={scrollRight}
+            className="w-12 h-12 flex items-center justify-center bg-[#0f3b73] text-white rounded-full hover:bg-[#f7c815] hover:text-[#0f3b73] transition-colors shadow-md"
+            aria-label="Scroll right"
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+          </button>
         </div>
       </section>
       
