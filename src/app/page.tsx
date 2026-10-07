@@ -77,26 +77,44 @@ export default function Home() {
       </header>
 
       {/* Hero Section */}
-      <section className="relative min-h-[85vh] flex items-center justify-center bg-[#0f3b73] text-white overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/images/school_exterior.jpg')] bg-cover bg-center opacity-30 mix-blend-overlay"></div>
-        <div className="z-10 text-center px-4 max-w-5xl flex flex-col items-center py-20">
-          <img src="/logo.png" alt="Ahlul Bait Public School Logo" className="w-48 h-48 mb-8 object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-500" />
-          <p className="text-[#f7c815] font-bold tracking-widest uppercase mb-4 text-sm md:text-base letter-spacing-2">
-            A Project of Ashghrai Organization
-          </p>
-          <h2 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 drop-shadow-lg leading-tight">
-            Build a Brighter Future with Us
-          </h2>
-          <p className="text-xl md:text-2xl text-blue-100 font-light max-w-3xl mx-auto mb-10 leading-relaxed drop-shadow-md">
-            Quality education with Islamic values, modern teaching methods, and a safe, supportive environment. Located in Tharushah.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-4">
-            <button className="px-8 py-4 bg-[#f7c815] hover:bg-yellow-500 text-[#0f3b73] font-bold rounded-sm transition-all shadow-lg hover:shadow-xl uppercase tracking-wide">
-              Apply Now
+      <section className="relative min-h-[85vh] flex items-center bg-[#2c3e50] text-white overflow-hidden border-b-[16px] border-[#fdbf38]">
+        {/* Background Image */}
+        <div className="absolute inset-0 bg-[url('/images/school_exterior.jpg')] bg-cover bg-center opacity-40 mix-blend-overlay grayscale-[30%]"></div>
+        
+        {/* Content Container */}
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-4 md:px-8 py-12 lg:py-0 flex flex-col lg:flex-row items-center justify-between min-h-[85vh]">
+          
+          {/* Left Column (Text) */}
+          <div className="w-full lg:w-[55%] flex flex-col items-start text-left pt-10 lg:pt-0 z-20">
+            <h1 className="text-5xl sm:text-6xl lg:text-[5rem] font-extrabold tracking-tight mb-4 drop-shadow-lg leading-[1.1]">
+              Your Kids<br />Deserve The<br />Best Education
+            </h1>
+            <p className="text-lg lg:text-2xl text-gray-100 font-medium mb-10 drop-shadow-md">
+              e Learning, Expert Teachers & Safe Environment
+            </p>
+            <button className="px-10 py-4 bg-[#fdbf38] hover:bg-yellow-500 text-white font-bold rounded-full transition-all shadow-xl text-lg hover:shadow-2xl transform hover:-translate-y-1">
+              Admission Now
             </button>
-            <button className="px-8 py-4 bg-transparent border-2 border-white hover:bg-white hover:text-[#0f3b73] text-white font-bold rounded-sm transition-all shadow-lg uppercase tracking-wide">
-              Explore Programs
-            </button>
+          </div>
+
+          {/* Right Column (Image + Circle + Speech Bubble) */}
+          <div className="w-full lg:w-[45%] flex justify-center lg:justify-end relative mt-16 lg:mt-0 h-[500px] lg:h-[750px]">
+            {/* Bright Blue Circle Blob */}
+            <div className="absolute right-[-5%] sm:right-[10%] lg:right-[-10%] top-1/2 -translate-y-1/2 w-[350px] h-[350px] sm:w-[450px] sm:h-[450px] lg:w-[650px] lg:h-[650px] bg-[#00b4ff] rounded-full z-0 overflow-hidden shadow-inner"></div>
+            
+            {/* Speech Bubble */}
+            <div className="absolute top-[10%] lg:top-[15%] right-[50%] lg:right-[70%] bg-[#00b4ff] text-white px-6 py-3 rounded-full font-semibold text-lg lg:text-xl shadow-xl z-20 whitespace-nowrap animate-bounce">
+              Back to School
+              {/* Bubble Tail */}
+              <div className="absolute bottom-[-12px] right-10 w-0 h-0 border-l-[12px] border-l-transparent border-t-[18px] border-t-[#00b4ff] border-r-[4px] border-r-transparent transform -rotate-12"></div>
+            </div>
+
+            {/* Students Image */}
+            <img 
+              src="/images/students_transparent.png" 
+              alt="Students" 
+              className="relative z-10 h-full w-auto object-contain object-bottom drop-shadow-2xl" 
+            />
           </div>
         </div>
       </section>
